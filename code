@@ -1,0 +1,11 @@
+import pandas as pd 
+
+link_df=pd.read_csv("https://raw.githubusercontent.com/narayanan225/datasets/main/tips.csv")
+link_df.head()
+link_df["total_bill"].describe()
+link_df["tip"].describe()
+import seaborn as sns
+import matplotlib.pyplot as plt
+plt.figure(figsize=(12,6))
+sns.boxplot(x=link_df["total_bill"])
+plt.show()
